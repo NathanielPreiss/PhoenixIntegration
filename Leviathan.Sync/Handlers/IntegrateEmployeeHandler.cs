@@ -1,4 +1,5 @@
-﻿using NServiceBus;
+﻿using System;
+using NServiceBus;
 using System.Threading.Tasks;
 
 namespace Leviathan.Sync
@@ -14,7 +15,9 @@ namespace Leviathan.Sync
 
         public async Task Handle(IntegrateEmployee message, IMessageHandlerContext context)
         {
-            await _repo.CreateIntegrationMap(null, message.Id);
+            var phoenixId = Guid.NewGuid();
+
+            await _repo.CreateIntegrationMap(phoenixId, message.Id);
 
             var employee = new LeviathanEmployee
             {
@@ -29,6 +32,7 @@ namespace Leviathan.Sync
             
             await context.Publish<EmployeeIntegrated>(m =>
             {
+                m.Id = phoenixId;
                 m.ExternalId = message.Id;
                 m.FirstName = message.FirstName;
                 m.LastName = message.LastName;

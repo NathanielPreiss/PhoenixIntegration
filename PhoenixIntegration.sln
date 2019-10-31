@@ -5,9 +5,17 @@ VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leviathan.Sync", "Leviathan.Sync\Leviathan.Sync.csproj", "{97DB56D3-0E9E-46B0-83E4-1F25E14BC23E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leviathan.Core", "Leviathan.Core\Leviathan.Core.csproj", "{57A6E6FA-E913-4ED5-A146-AC569D2088BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leviathan.Core", "Leviathan.Core\Leviathan.Core.csproj", "{57A6E6FA-E913-4ED5-A146-AC569D2088BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leviathan.Domain", "Leviathan.Domain\Leviathan.Domain.csproj", "{2B42FF93-C87E-409B-86E0-19C658892928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Leviathan.Domain", "Leviathan.Domain\Leviathan.Domain.csproj", "{2B42FF93-C87E-409B-86E0-19C658892928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phoenix.Core", "Phoenix.Core\Phoenix.Core.csproj", "{BB793AD9-5210-4023-9D41-FE69EF791AD1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Leviathan", "Leviathan", "{5A4D9853-E31A-4EEC-9708-645B28053A66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Phoenix", "Phoenix", "{606A3FCD-D6A9-4C55-99E7-FD2C1A2532B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phoenix.Sync", "Phoenix.Sync\Phoenix.Sync.csproj", "{61562F0E-67FB-4063-806F-86979E849679}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +35,24 @@ Global
 		{2B42FF93-C87E-409B-86E0-19C658892928}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B42FF93-C87E-409B-86E0-19C658892928}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B42FF93-C87E-409B-86E0-19C658892928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB793AD9-5210-4023-9D41-FE69EF791AD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB793AD9-5210-4023-9D41-FE69EF791AD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB793AD9-5210-4023-9D41-FE69EF791AD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB793AD9-5210-4023-9D41-FE69EF791AD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61562F0E-67FB-4063-806F-86979E849679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61562F0E-67FB-4063-806F-86979E849679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61562F0E-67FB-4063-806F-86979E849679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61562F0E-67FB-4063-806F-86979E849679}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{97DB56D3-0E9E-46B0-83E4-1F25E14BC23E} = {5A4D9853-E31A-4EEC-9708-645B28053A66}
+		{57A6E6FA-E913-4ED5-A146-AC569D2088BB} = {5A4D9853-E31A-4EEC-9708-645B28053A66}
+		{2B42FF93-C87E-409B-86E0-19C658892928} = {5A4D9853-E31A-4EEC-9708-645B28053A66}
+		{BB793AD9-5210-4023-9D41-FE69EF791AD1} = {606A3FCD-D6A9-4C55-99E7-FD2C1A2532B5}
+		{61562F0E-67FB-4063-806F-86979E849679} = {606A3FCD-D6A9-4C55-99E7-FD2C1A2532B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {64642427-6203-4C6C-9913-679309DE202C}

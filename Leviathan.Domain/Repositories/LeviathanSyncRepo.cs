@@ -30,7 +30,7 @@ namespace Leviathan
             await _context.SaveChangesAsync();
         }
 
-        public async Task CreateIntegrationMap(Guid? phoenixId, Guid? leviathanId)
+        public async Task CreateIntegrationMap(Guid phoenixId, Guid? leviathanId)
         {
             // TODO
             if (!leviathanId.HasValue)
@@ -39,7 +39,7 @@ namespace Leviathan
             if(await _context.EmployeeMaps.AnyAsync(e => e.LeviathanId == leviathanId))
                 return;
 
-            await _context.EmployeeMaps.AddAsync(new EmployeeMap {LeviathanId = leviathanId.Value});
+            await _context.EmployeeMaps.AddAsync(new EmployeeMap { PhoenixId = phoenixId, LeviathanId = leviathanId.Value});
             await _context.SaveChangesAsync();
         }
 

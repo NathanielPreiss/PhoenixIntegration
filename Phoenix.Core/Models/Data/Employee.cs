@@ -1,15 +1,14 @@
-﻿using NServiceBus;
-using System;
+﻿using System;
 
-namespace Leviathan
+namespace Phoenix
 {
-    public class EmployeeIntegrated : IEvent
+    public class Employee
     {
         public Guid Id { get; set; }
-        public Guid ExternalId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Email { get; set; }
         public string Role { get; set; }
+        public string Telephone { get; set; }
     }
 }
